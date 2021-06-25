@@ -35,9 +35,9 @@ export default function Post() {
   return (
     <main className="bg-green-100 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive">Hola</h1>
+        <h1 className="text-5xl flex justify-center poppins">Posts</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-          My posts
+          Check out my posts!
           {console.log(JSON.stringify(postData))}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
