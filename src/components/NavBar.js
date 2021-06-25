@@ -18,27 +18,27 @@ export default function Navbar() {
           <NavLink
             to="/post"
             activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 text-xs sm:text-base hover:text-green-800"
           >
             Blog Posts
           </NavLink>
           <NavLink
             to="/project"
             activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 text-xs sm:text-base hover:text-green-800"
           >
             Projects
           </NavLink>
           <NavLink
             to="/about"
             activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
+            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 text-xs sm:text-base hover:text-green-800"
           >
             About me
           </NavLink>
           <div></div>
         </nav>
-        <div className="inline-flex py-3 px-3 my-6">
+        <div className="inline-flex py-3 px-3 my-6 social-icons">
           <SocialIcon
             url="https://www.instagram.com/lemon.ginger.tea/"
             className="mr-4"

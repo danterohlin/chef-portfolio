@@ -19,6 +19,16 @@
   border-radius: 5px;
 }
 
+body {
+  background-color: rgba(31, 41, 55, 1);
+}
+
 .home-name {
   font-size: 150px;
+}
+
+@media screen and (max-width: 800px) {
+  .social-icons {
+    display: none;
+  }
 }
