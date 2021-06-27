@@ -24,7 +24,7 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!author) return <div>Loading...</div>;
+  if (!author) return <div className="p-10">Loading...</div>;
 
   return (
     <main className="relative bg-green-100">

@@ -10,7 +10,7 @@ export default function Home() {
       ></img>
       <section className="relative flex justify-center min-h-screen ph-12 pt-64 px-8">
         <h1 className="text-gray-700 font-bold poppins leading-none leading-snug text-3xl sm:text-6xl">
-          Aloha, I'm Ash.
+          Aloha.
         </h1>
       </section>
     </main>
