@@ -13,7 +13,7 @@ export default function Navbar() {
             activeClassName="text-white"
             className="inflex-flex items-center py-6 px-3 text-gray-800 hover:text-yellow-400 hover:text-opacity-60 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
           >
-            Ash Thompson
+            Steven Miller
           </NavLink>
           <NavLink
             to="/post"
