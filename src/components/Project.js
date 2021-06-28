@@ -22,9 +22,11 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="bg-gray-100 min-h-screen p-12">
+    <main className="bg-gray-50 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-2xl sm:text-4xl text-gray-700 flex justify-center poppins">Projects</h1>
+        <h1 className="text-2xl sm:text-4xl text-gray-700 flex justify-center poppins">
+          Projects
+        </h1>
         <h2 className="text-lg text-gray-700 flex justify-center mb-12">
           Welcome to my projects page
         </h2>
@@ -35,7 +37,7 @@ export default function Project() {
                 className="relative rounded-lg shadow-xl bg-white p-6 sm:p-16"
                 key={index}
               >
-                <h3 className="text-gray-800 text-xl sm:text-3xl font-bold mb-2 hover:text-red-700">
+                <h3 className="text-gray-800 poppins text-xl sm:text-3xl font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}
                     alt={project.title}
@@ -50,8 +52,7 @@ export default function Project() {
                     <strong className="font-bold">Finished on</strong>:{" "}
                     {new Date(project.date).toLocaleDateString()}
                   </span>
-                  <strong className="font-bold">Company</strong>:{" "}
-                  {project.place}
+                  <strong className="font-bold">Place</strong>: {project.place}
                   <span>
                     <strong className="font-bold">Type</strong>:{" "}
                     {project.projectType}

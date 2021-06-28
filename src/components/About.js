@@ -24,11 +24,11 @@ export default function About() {
       .catch(console.error);
   }, []);
 
-  if (!author) return <div className="p-10">Loading...</div>;
+  if (!author) return <div className="m-10 p-20">Loading...</div>;
 
   return (
-    <main className="relative bg-gray-100">
-      <div className="p-10 lg:pt-28 lg:pb-28 container mx-auto relative">
+    <main className="relative bg-gray-50 min-h-screen">
+      <div className="p-10 lg:py-40 container mx-auto relative">
         <section className="bg-green-800 rounded-lg shadow-2xl lg:flex p-20">
           <img
             src={urlFor(author.authorImage).url()}
