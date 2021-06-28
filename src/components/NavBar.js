@@ -69,28 +69,28 @@ export default function Navbar() {
             <div>
               <NavLink
                 to="/post"
-                activeClassName="transform scale-125"
+                activeClassName="scale-125 font-bold"
                 className="nav-link inline-flex items-center py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 transition duration-300"
               >
                 POSTS
               </NavLink>
               <NavLink
                 to="/project"
-                activeClassName="transform scale-125"
+                activeClassName="scale-125 font-bold"
                 className="nav-link inline-flex items-center  py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 duration-300"
               >
                 PROJECTS
               </NavLink>
               <NavLink
                 to="/about"
-                activeClassName="transform scale-125"
+                activeClassName="scale-125 font-bold"
                 className="nav-link inline-flex items-center py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 duration-300"
               >
                 ABOUT
               </NavLink>
               <NavLink
                 to="/contact"
-                activeClassName="transform scale-125"
+                activeClassName="scale-125 font-bold"
                 className="nav-link inline-flex items-center py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 duration-300"
               >
                 CONTACT
