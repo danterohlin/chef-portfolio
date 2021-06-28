@@ -13,7 +13,7 @@ export default function Home() {
           Aloha.
         </h1>
       </section>
-      <section className="p-10 sm:p-20 sm:w-2/4 mx-auto">
+      <section className="p-10 pt-20 sm:p-20 sm:w-2/4 mx-auto">
         <p>
           I am Steven Miller, and I am looking for a job in Customer Services. I
           have 10 years of experience in related job positions. I started
