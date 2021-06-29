@@ -29,7 +29,7 @@ export default function About() {
   return (
     <main className="relative bg-gray-50 min-h-screen">
       <div className="p-10 lg:py-40 container mx-auto relative">
-        <section className="bg-green-800 rounded-lg shadow-2xl lg:flex p-20">
+        <section className="bg-green-800 rounded-lg shadow-xl lg:flex p-14">
           <img
             src={urlFor(author.authorImage).url()}
             className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"

@@ -33,28 +33,28 @@ export default function Footer() {
         <div className="inline-flex py-3 px-3 my-6 social-icons">
           <SocialIcon
             url="https://www.instagram.com/"
-            className="mr-4 transform hover:scale-125 transition duration-200"
+            className="mr-4 transform hover:scale-125 transition duration-300"
             target="_blank"
             fgColor="#fff"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://www.facebook.com/"
-            className="mr-4 transform hover:scale-125 transition duration-200"
+            className="mr-4 transform hover:scale-125 transition duration-300"
             target="_blank"
             fgColor="#fff"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://twitter.com/"
-            className="mr-4 transform hover:scale-125 transition duration-200"
+            className="mr-4 transform hover:scale-125 transition duration-300"
             target="_blank"
             fgColor="#fff"
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://www.linkedin.com"
-            className="mr-4 transform hover:scale-125 transition duration-200"
+            className="mr-4 transform hover:scale-125 transition duration-300"
             target="_blank"
             fgColor="#fff"
             style={{ height: 35, width: 35 }}

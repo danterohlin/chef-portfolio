@@ -35,12 +35,11 @@ export default function Post() {
   return (
     <main className="bg-gray-50 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-2xl sm:text-4xl text-gray-700 flex justify-center poppins">
+        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Posts
         </h1>
         <h2 className="text-lg text-gray-700 flex justify-center mb-12">
           Welcome to my posts page
-          {console.log(JSON.stringify(postData))}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData ? (

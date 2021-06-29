@@ -24,7 +24,7 @@ export default function Project() {
   return (
     <main className="bg-gray-50 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-2xl sm:text-4xl text-gray-700 flex justify-center poppins">
+        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Projects
         </h1>
         <h2 className="text-lg text-gray-700 flex justify-center mb-12">
@@ -34,10 +34,10 @@ export default function Project() {
           {projectData &&
             projectData.map((project, index) => (
               <article
-                className="relative rounded-lg shadow-xl bg-white p-6 sm:p-16"
+                className="relative rounded-lg shadow-xl bg-white p-6 sm:p-16 hover:scale-105 transform transition duration-300"
                 key={index}
               >
-                <h3 className="text-gray-800 poppins text-xl sm:text-3xl font-bold mb-2 hover:text-red-700">
+                <h3 className="text-gray-800 poppins text-xl sm:text-3xl font-bold mb-2 hover:text-gray-500">
                   <a
                     href={project.link}
                     alt={project.title}
