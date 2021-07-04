@@ -8,15 +8,12 @@ export default function SearchResult({ searchValue, data }) {
           data !== null &&
           data
             .filter((data) => {
-              if (searchValue === "") {
-                return data;
-              } else if (
+              if (
                 data.slug.current
                   .toLowerCase()
                   .includes(searchValue.toLowerCase())
-              ) {
+              )
                 return data;
-              }
             })
             .map((data, index) => (
               <a

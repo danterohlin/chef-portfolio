@@ -9,7 +9,7 @@ export default function Home() {
         className="h-96 object-cover absolute"
         width="100%"
         playsInline
-        autoPlay="false"
+        autoPlay
         muted
         loop
       >
