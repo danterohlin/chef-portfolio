@@ -8,14 +8,14 @@ export default function Project() {
     sanityClient
       .fetch(
         `*[_type == 'project']{
-      title,
-      date,
-      place,
-      description,
-      projectType,
-      link,
-      tags
-    }`
+            title,
+            date,
+            place,
+            description,
+            projectType,
+            link,
+            tags
+        }`
       )
       .then((data) => setProjectData(data))
       .catch(console.error);

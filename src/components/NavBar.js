@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import SearchResult from "./SearchResult";
+import SanityClient from "../client.js";
 
 export default function Navbar() {
+  const [data, setData] = useState(null);
   let [toggleSearch, setToggleSearch] = useState(false);
   let [toggleMenu, setToggleMenu] = useState(false);
   let [toggleResults, setToggleResults] = useState(false);
@@ -18,6 +21,23 @@ export default function Navbar() {
       setToggleResults(false);
     }
   }, [searchValue]);
+
+  const fetchData = async (query) => {
+    try {
+      const data = await SanityClient.fetch(query);
+      if (data) {
+        setData(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    const query = `*[_type == "post"]{slug}
+    `;
+    fetchData(query);
+  }, []);
 
   return (
     <>
@@ -48,20 +68,18 @@ export default function Navbar() {
             <input
               className="searchInput md:w-96"
               id="myInput"
+              value={searchValue}
               onChange={(e) => {
                 setSearchValue(e.target.value);
               }}
-              placeholder="Search"
+              placeholder="Try searching for 'post'"
             ></input>
-            {toggleResults && (
-              <div className="absolute w-full flex flex-col px-2 sm:p-2">
-                <a href="#about">Some result..</a>
-              </div>
-            )}
           </div>
+
           <button
             onClick={() => {
               setToggleSearch(!toggleSearch);
+              setSearchValue("");
             }}
           >
             <svg
@@ -80,6 +98,9 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
+        {toggleResults && (
+          <SearchResult data={data} searchValue={searchValue} />
+        )}
         <div className="container mx-auto flex justify-between items-center">
           <nav className="flex items-center justify-between w-4/5 m-auto">
             <button
@@ -143,6 +164,7 @@ export default function Navbar() {
               <button
                 onClick={() => {
                   setToggleSearch(!toggleSearch);
+                  setSearchValue("");
                   setFocus();
                 }}
               >
