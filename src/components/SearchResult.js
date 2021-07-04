@@ -6,7 +6,7 @@ export default function SearchResult({ searchValue, data }) {
       <div className="flex flex-col w-48 md:w-96">
         {searchValue !== "" &&
           data !== null &&
-          data
+          data // eslint-disable-next-line
             .filter((data) => {
               if (
                 data.slug.current
