@@ -55,6 +55,12 @@ textarea {
   border-radius: 5px;
 }
 
+.video-bg {
+  background-image: url("../src/bg-alt.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .home-name {
   font-size: 150px;
 }

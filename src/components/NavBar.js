@@ -66,13 +66,13 @@ export default function Navbar() {
           </svg>
           <div className="relative">
             <input
-              className="searchInput md:w-96"
+              className="searchInput w-60 sm:w-96"
               id="myInput"
               value={searchValue}
               onChange={(e) => {
                 setSearchValue(e.target.value);
               }}
-              placeholder="Try searching for 'post'"
+              placeholder="Search"
             ></input>
           </div>
 

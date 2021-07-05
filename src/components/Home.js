@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       <video
-        className="h-96 object-cover absolute"
+        className="h-96 object-cover absolute video-bg"
         width="100%"
         playsInline
         autoPlay
@@ -15,6 +15,7 @@ export default function Home() {
       >
         <source src={video} type="video/webm" />
         Your browser does not support the video tag.
+      
       </video>
       <section className="relative flex justify-center ph-12 py-32 px-8">
         <Link to="/contact">
@@ -25,7 +26,7 @@ export default function Home() {
       </section>
       <section className="p-10 pt-20 sm:p-20 sm:w-2/4 mx-auto">
         <hr className="border-gray-400 my-10" />
-        <p className="mx-8">
+        <p className="sm:mx-8">
           I am Steven Miller, and I am looking for a job in Customer Services. I
           have 10 years of experience in related job positions. I started
           working as a Customer Care Agent in a call center gradually moving to
