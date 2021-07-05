@@ -19,7 +19,7 @@ export default function Home() {
       </video>
       <section className="relative flex justify-center ph-12 py-32 px-8">
         <Link to="/contact">
-          <h1 className="text-green-100 font-bold poppins leading-none leading-snug text-3xl sm:text-5xl bg-green-500 bg-opacity-40 rounded-xl p-7 hover:bg-opacity-60 transition duration-500 hover:bg-green-800 hover:scale-105 transform">
+          <h1 className="text-green-100 font-bold poppins leading-none leading-snug text-3xl sm:text-5xl bg-green-600 bg-opacity-80 rounded-xl p-7 hover:bg-opacity-60 transition duration-500 hover:bg-green-800 hover:scale-105 transform">
             Hire me
           </h1>
         </Link>
