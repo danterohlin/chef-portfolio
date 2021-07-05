@@ -198,11 +198,11 @@ export default function Navbar() {
             POSTS
           </NavLink>
           <NavLink
-            to="/project"
+            to="/tutorial"
             activeClassName="scale-125 font-bold text-yellow-400"
             className="transform transition duration-200 flex mx-3 text-xs"
           >
-            PROJECTS
+            R TUTORIALS
           </NavLink>
           <NavLink
             to="/about"

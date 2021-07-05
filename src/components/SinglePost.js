@@ -34,7 +34,7 @@ export default function SinglePost() {
       .then((data) => setSinglePost(data[0]));
   }, [slug]);
 
-  if (!singlePost) return <div>Loading..</div>;
+  if (!singlePost) return <div className="w-full text-center mt-20">Loading..</div>;
 
   return (
     <main className="bg-gray-200 min-h-screen p-12">

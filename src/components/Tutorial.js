@@ -12,7 +12,7 @@ export default function Tutorial() {
             date,
             place,
             description,
-            projectType,
+            tutorialType,
             link,
             tags
         }`
@@ -22,7 +22,7 @@ export default function Tutorial() {
   }, []);
 
   return (
-    <main className="bg-gray-50 min-h-screen p-12">
+    <main className="bg-gray-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Tutorials
@@ -34,7 +34,7 @@ export default function Tutorial() {
           {projectData &&
             projectData.map((project, index) => (
               <article
-                className="relative rounded-lg shadow-xl bg-white p-6 sm:p-16 hover:scale-105 transform transition duration-300"
+                className="relative rounded-lg shadow-xl bg-white p-6 sm:p-16"
                 key={index}
               >
                 <h3 className="text-gray-800 poppins text-xl sm:text-3xl font-bold mb-2 hover:text-gray-500">
@@ -54,8 +54,8 @@ export default function Tutorial() {
                   </span>
                   <strong className="font-bold">Place</strong>: {project.place}
                   <span>
-                    <strong className="font-bold">Type</strong>:
-                    {project.tutorialType}
+                    <strong className="font-bold">Type</strong>:{" "}
+                    {project.tutorialType.charAt(0).toUpperCase() + project.tutorialType.slice(1)}
                   </span>
                   <p className="my-6 text-lg text-gray-700 leading-relaxed">
                     {project.description}
@@ -64,11 +64,11 @@ export default function Tutorial() {
                     href={project.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="text-red-500 font-bold hover:underline hover:text-red-400 text-base sm:text-xl"
+                    className="text-red-500 font-bold hover:text-red-400 text-base sm:text-xl"
                   >
                     View The Project{" "}
-                    <span role="img" aria-label="right pointer">
-                      👉
+                    <span role="img" aria-label="right pointer" className="ml-2">
+                      ➡️
                     </span>
                   </a>
                 </div>

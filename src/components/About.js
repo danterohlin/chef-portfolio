@@ -27,7 +27,7 @@ export default function About() {
   if (!author) return <div className="m-10 p-20">Loading...</div>;
 
   return (
-    <main className="relative bg-gray-50 min-h-screen">
+    <main className="relative bg-gray-100 min-h-screen">
       <div className="p-10 lg:py-40 container mx-auto relative">
         <section className="bg-green-800 rounded-lg shadow-xl lg:flex p-6 sm:p-14">
           <img
@@ -40,7 +40,7 @@ export default function About() {
               Hey there. I'm{" "}
               <span className="text-green-100">{author.name}.</span>
             </h1>
-            <div className="prose lg:prose-xl text-white">
+            <div className="prose lg:prose-xl text-gray-200">
               <BlockContent blocks={author.bio} projectId="r07rq1og" />
             </div>
           </div>

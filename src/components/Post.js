@@ -33,7 +33,7 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-gray-50 min-h-screen p-12">
+    <main className="bg-gray-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Posts
@@ -42,7 +42,7 @@ export default function Post() {
           Welcome to my posts page
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {postData ? (
+          {postData && 
             postData.map((post, index) => (
               <article
                 key={post.slug.current}
@@ -67,9 +67,8 @@ export default function Post() {
                 </Link>
               </article>
             ))
-          ) : (
-            <div>Loading..</div>
-          )}
+          
+          }
         </div>
       </section>
     </main>

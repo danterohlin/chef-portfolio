@@ -4,7 +4,7 @@ import video from "../video-bg.mp4";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-100">
       <video
         className="h-96 object-cover absolute video-bg"
         width="100%"
