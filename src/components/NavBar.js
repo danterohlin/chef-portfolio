@@ -141,11 +141,11 @@ export default function Navbar() {
                 POSTS
               </NavLink>
               <NavLink
-                to="/project"
+                to="/tutorial"
                 activeClassName="scale-125 font-bold text-yellow-400"
                 className="nav-link inline-flex items-center  py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 duration-300"
               >
-                PROJECTS
+                R TUTORIALS
               </NavLink>
               <NavLink
                 to="/about"
