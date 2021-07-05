@@ -13,7 +13,7 @@ export default function Home() {
         muted
         loop
       >
-        <source src="{video}" type="video/webm" />
+        <source src={video} type="video/webm" />
         Your browser does not support the video tag.
       
       </video>
