@@ -128,7 +128,7 @@ export default function Navbar() {
               to="/"
               exact
               activeClassName="text-white"
-              className="inflex-flex items-center py-6 sm:px-3 m:mr-10 text-gray-800 hover:text-yellow-400 hover:text-opacity-60 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
+              className="inflex-flex items-center py-6 sm:px-3 m:mr-10 text-gray-800 hover:text-yellow-400 hover:text-opacity-60 text-lg sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
             >
               Steven Miller
             </NavLink>

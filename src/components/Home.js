@@ -13,18 +13,18 @@ export default function Home() {
         muted
         loop
       >
-        <source src={video} type="video/webm" />
+        <source src="{video}" type="video/webm" />
         Your browser does not support the video tag.
       
       </video>
       <section className="relative flex justify-center ph-12 py-32 px-8">
         <Link to="/contact">
-          <h1 className="text-green-100 font-bold poppins leading-none leading-snug text-3xl sm:text-5xl bg-green-600 bg-opacity-80 rounded-xl p-7 hover:bg-opacity-60 transition duration-500 hover:bg-green-800 hover:scale-105 transform">
+          <h1 className="text-white font-bold poppins leading-none leading-snug text-2xl sm:text-4xl md:text-4xl bg-green-500 bg-opacity-70 rounded-xl p-5 sm:p-7 hover:bg-opacity-60 transition duration-500 hover:bg-green-800 hover:scale-105 transform">
             Hire me
           </h1>
         </Link>
       </section>
-      <section className="p-10 pt-20 sm:p-20 sm:w-2/4 mx-auto">
+      <section className="p-10 pt-20 md:p-20 lg:w-2/4 mx-auto">
         <hr className="border-gray-400 my-10" />
         <p className="sm:mx-8">
           I am Steven Miller, and I am looking for a job in Customer Services. I
