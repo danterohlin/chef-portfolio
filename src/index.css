@@ -56,8 +56,8 @@ textarea {
 }
 
 .video-bg {
-  background-image: url("../src/bg-alt.jpeg");
-  background-size: initial;
+  background-image: url("../src/bg-alt.png");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 

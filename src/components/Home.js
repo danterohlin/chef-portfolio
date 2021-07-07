@@ -19,14 +19,14 @@ export default function Home() {
       </video>
       <section className="relative flex justify-center ph-12 py-32 px-8">
         <Link to="/contact">
-          <h1 className="text-white font-bold poppins leading-none leading-snug text-2xl sm:text-4xl md:text-4xl bg-green-500 bg-opacity-70 rounded-xl p-5 sm:p-7 hover:bg-opacity-60 transition duration-500 hover:bg-green-800 hover:scale-105 transform">
+          <h1 className="text-white font-bold poppins leading-none leading-snug text-2xl sm:text-4xl md:text-4xl bg-green-800 bg-opacity-80 p-5 sm:p-5 hover:bg-opacity-90 hover:scale-105 transform transition duration-400">
             Hire me
           </h1>
         </Link>
       </section>
       <section className="p-10 pt-20 md:p-20 lg:w-2/4 mx-auto">
         <hr className="border-gray-400 my-10" />
-        <p className="sm:mx-8">
+        <p className="sm:mx-8 text-gray-700">
           I am Steven Miller, and I am looking for a job in Customer Services. I
           have 10 years of experience in related job positions. I started
           working as a Customer Care Agent in a call center gradually moving to
