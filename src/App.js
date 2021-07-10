@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import SearchBar from "./components/SearchBar";
 import SearchResult from "./components/SearchResult";
 import Tutorial from "./components/Tutorial";
+import Thanks from "./components/Thanks"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route component={Contact} path="/Contact" />
         <Route component={SearchBar} path="/searchBar" />
         <Route component={SearchResult} path="/searchResult" />
+        <Route component={Thanks} path="/thanks" />
       </Switch>
       <Footer />
     </BrowserRouter>

@@ -6,18 +6,19 @@ export default function Contact() {
       <header className="flex justify-center items-center h-40 bg-gray-100">
         <h1 className="text-4xl poppins text-gray-700">Contact me</h1>
       </header>
-      <form className="flex flex-col w-3/4 sm:w-2/4 m-auto">
+      <form action="https://formsubmit.co/dante.rohlin@gmail.com" method="POST" className="flex flex-col w-3/4 sm:w-2/4 m-auto">
         <label>Name (required)</label>
-        <input type="text" />
+        <input type="text" name="name" required/>
         <label>Email (required)</label>
-        <input type="email" />
+        <input type="email" name="email" required/>
         <label>Subject</label>
-        <input type="text" />
+        <input type="text" name="subject" />
         <label>Your Message</label>
-        <textarea type="text" rows="6" />
+        <textarea type="text" name="message" rows="6" />
         <button className="bg-yellow-400 h-10 w-20 my-5 text-white poppins tracking-widest border-2 border-yellow-400 hover:bg-gray-50 hover:text-yellow-400 transform transition duration-500">
           <p className="">SEND</p>
         </button>
+        <input type="hidden" name="_next" value="https://at-portfolio-1.netlify.app/thanks"></input>
       </form>
     </main>
   );

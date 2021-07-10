@@ -192,28 +192,28 @@ export default function Navbar() {
         <div className="burger-menu justify-center pb-5 items-center w-full right-0 top-20 w-1/3 bg-white flex">
           <NavLink
             to="/post"
-            activeClassName="scale-125 font-bold text-yellow-400"
+            activeClassName="scale-105 font-bold text-yellow-400"
             className="transform transition duration-200 flex mx-3 text-xs"
           >
             POSTS
           </NavLink>
           <NavLink
             to="/tutorial"
-            activeClassName="scale-125 font-bold text-yellow-400"
+            activeClassName="scale-105 font-bold text-yellow-400"
             className="transform transition duration-200 flex mx-3 text-xs"
           >
             R TUTORIALS
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName="scale-125 font-bold text-yellow-400"
+            activeClassName="scale-105 font-bold text-yellow-400"
             className="transform transition duration-200 flex mx-3 text-xs"
           >
             ABOUT
           </NavLink>
           <NavLink
             to="/contact"
-            activeClassName="scale-125 font-bold text-yellow-400"
+            activeClassName="scale-105 font-bold text-yellow-400"
             className="transform transition duration-200 flex mx-3 text-xs"
           >
             CONTACT
