@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100">
       <video
-        className="h-96 object-cover absolute video-bg"
+        className="h-96 absolute object-cover video-bg"
         width="100%"
         playsInline
         autoPlay
@@ -17,14 +17,14 @@ export default function Home() {
         Your browser does not support the video tag.
       
       </video>
-      <section className="relative flex justify-center ph-12 py-32 px-8">
+      <section className="flex relative justify-center h-96 items-center px-8">
         <Link to="/contact">
           <h1 className="text-white font-bold poppins leading-none leading-snug text-2xl sm:text-4xl md:text-4xl bg-green-800 bg-opacity-80 p-5 sm:p-5 hover:bg-opacity-90 hover:scale-105 transform transition duration-400">
             Hire me
           </h1>
         </Link>
       </section>
-      <section className="p-10 pt-20 md:p-20 lg:w-2/4 mx-auto">
+      <section className="p-10 md:p-20 lg:w-2/4 mx-auto">
         <hr className="border-gray-400 my-10" />
         <p className="sm:mx-8 text-gray-700">
           I am Steven Miller, and I am looking for a job in Customer Services. I

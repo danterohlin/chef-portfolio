@@ -27,8 +27,8 @@ export default function About() {
   if (!author) return <div className="m-10 p-20">Loading...</div>;
 
   return (
-    <main className="relative bg-gray-100 min-h-screen">
-      <div className="p-10 lg:py-40 container mx-auto relative">
+    <main className="bg-gray-100 min-h-screen">
+      <div className="p-10 lg:py-40 container mx-auto">
         <section className="bg-green-800 rounded-lg shadow-xl lg:flex p-6 sm:p-14">
           <img
             src={urlFor(author.authorImage).url()}

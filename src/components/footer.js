@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white absolute w-screen">
       <div className="container mx-auto flex justify-between items-center">
         <nav className="flex items-center m-auto sm:m-0 footer--nav">
           <NavLink

@@ -2,8 +2,9 @@ import React from "react";
 
 export default function SearchResult({ searchValue, data }) {
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col w-60 sm:w-96">
+    <div className="flex w-full justify-center">
+    <div className="w-3/4 sm:w-2/4 flex">
+      <div className="flex flex-col w-full">
         {searchValue !== "" &&
           data !== null &&
           data // eslint-disable-next-line
@@ -24,6 +25,7 @@ export default function SearchResult({ searchValue, data }) {
                 {data.slug.current.replaceAll("-", " ")}
               </a>
             ))}
+      </div>
       </div>
     </div>
   );

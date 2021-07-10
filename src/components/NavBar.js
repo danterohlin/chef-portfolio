@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-white">
+      <header className="bg-white relative w-screen">
         <div
           className={`transition duration-400 transform h-0 scale-0 pt-2
           ${
@@ -64,9 +64,9 @@ export default function Navbar() {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-          <div className="relative">
+          <div className="relative w-3/4 sm:w-2/4">
             <input
-              className="searchInput w-60 sm:w-96"
+              className="searchInput w-full"
               id="myInput"
               value={searchValue}
               onChange={(e) => {
