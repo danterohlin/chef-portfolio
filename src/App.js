@@ -3,12 +3,13 @@ import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
-import Project from "./components/Project";
 import NavBar from "./components/NavBar";
 import Footer from "./components/footer";
 import Contact from "./components/Contact";
 import SearchBar from "./components/SearchBar";
 import SearchResult from "./components/SearchResult";
+import Tutorial from "./components/Tutorial";
+import Thanks from "./components/Thanks"
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
         <Route component={About} path="/About" />
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
-        <Route component={Project} path="/project" />
+        <Route component={Tutorial} path="/tutorial" />
         <Route component={Contact} path="/Contact" />
         <Route component={SearchBar} path="/searchBar" />
         <Route component={SearchResult} path="/searchResult" />
+        <Route component={Thanks} path="/thanks" />
       </Switch>
       <Footer />
     </BrowserRouter>

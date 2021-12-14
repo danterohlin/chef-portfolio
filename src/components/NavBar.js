@@ -56,6 +56,7 @@ export default function Navbar() {
 
   return (
     <>
+<<<<<<< HEAD
       <header
         className={`fixed top-0 left-0 w-screen z-10 ${
           scrollY > 100
@@ -63,6 +64,9 @@ export default function Navbar() {
             : "bg-transparent text-white"
         }`}
       >
+=======
+      <header className="bg-white relative w-screen">
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
         <div
           className={`transition duration-400 bg-white transform h-0 scale-0
           ${
@@ -85,15 +89,25 @@ export default function Navbar() {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+<<<<<<< HEAD
           <div className="relative w-2/4">
             <input
               className="searchInput w-full mx-auto"
+=======
+          <div className="relative w-3/4 sm:w-2/4">
+            <input
+              className="searchInput w-full"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
               id="myInput"
               value={searchValue}
               onChange={(e) => {
                 setSearchValue(e.target.value);
               }}
+<<<<<<< HEAD
               placeholder='Try to search for "post"'
+=======
+              placeholder="Search"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
             ></input>
           </div>
 
@@ -148,8 +162,13 @@ export default function Navbar() {
             <NavLink
               to="/"
               exact
+<<<<<<< HEAD
               activeClassName="text-yellow-400"
               className="text-yellow-400 whitespace-nowrap items-center sm:px-3 m:mr-10 text-white hover:text-yellow-800 hover:text-opacity-100 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
+=======
+              activeClassName="text-white"
+              className="inflex-flex items-center py-6 sm:px-3 m:mr-10 text-gray-800 hover:text-yellow-400 hover:text-opacity-60 text-lg sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
             >
               Steven Miller
             </NavLink>
@@ -162,11 +181,17 @@ export default function Navbar() {
                 RECEPIES
               </NavLink>
               <NavLink
+<<<<<<< HEAD
                 to="/project"
                 activeClassName=" font-bold"
                 className="nav-link inline-flex items-center   px-2 sm:px-8 my-6 rounded text-s poppins hover:text-opacity-60 sm:text-md transform  duration-300"
+=======
+                to="/tutorial"
+                activeClassName="scale-125 font-bold text-yellow-400"
+                className="nav-link inline-flex items-center  py-3 px-2 sm:px-8 my-6 rounded text-gray-800 text-xs poppins hover:text-opacity-60 sm:text-sm transform hover:scale-125 duration-300"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
               >
-                PROJECTS
+                R TUTORIALS
               </NavLink>
               <NavLink
                 to="/about"
@@ -213,12 +238,18 @@ export default function Navbar() {
         <div className="burger-menu fixed top-20 z-10 justify-center pb-5 items-center w-full right-0 top-20 w-1/3 bg-white flex">
           <NavLink
             to="/post"
+<<<<<<< HEAD
             activeClassName=" font-bold text-yellow-400"
             className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+=======
+            activeClassName="scale-105 font-bold text-yellow-400"
+            className="transform transition duration-200 flex mx-3 text-xs"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
           >
             RECEPIES
           </NavLink>
           <NavLink
+<<<<<<< HEAD
             to="/project"
             activeClassName=" font-bold text-yellow-400"
             className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
@@ -229,13 +260,30 @@ export default function Navbar() {
             to="/about"
             activeClassName=" font-bold text-yellow-400"
             className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+=======
+            to="/tutorial"
+            activeClassName="scale-105 font-bold text-yellow-400"
+            className="transform transition duration-200 flex mx-3 text-xs"
+          >
+            R TUTORIALS
+          </NavLink>
+          <NavLink
+            to="/about"
+            activeClassName="scale-105 font-bold text-yellow-400"
+            className="transform transition duration-200 flex mx-3 text-xs"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
           >
             ABOUT ME
           </NavLink>
           <NavLink
             to="/contact"
+<<<<<<< HEAD
             activeClassName=" font-bold text-yellow-400"
             className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+=======
+            activeClassName="scale-105 font-bold text-yellow-400"
+            className="transform transition duration-200 flex mx-3 text-xs"
+>>>>>>> 1694d4c264b6fbc7e1ed5dc2589e50486588cde5
           >
             CONTACT
           </NavLink>
