@@ -33,8 +33,8 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-gray-50 min-h-screen p-12">
-      <section className="container mx-auto">
+    <main className="bg-gray-50 mt-20 min-h-screen p-12">
+      <section className="container w-3/5 mx-auto">
         <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Posts
         </h1>
@@ -68,7 +68,7 @@ export default function Post() {
               </article>
             ))
           ) : (
-            <div>Loading..</div>
+            <div className="ml-10">Loading..</div>
           )}
         </div>
       </section>

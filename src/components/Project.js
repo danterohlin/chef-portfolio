@@ -22,7 +22,7 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="bg-gray-50 min-h-screen p-12">
+    <main className="bg-gray-50 mt-20 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
           Projects
