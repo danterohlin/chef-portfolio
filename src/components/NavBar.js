@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-screen z-10 ${
+        className={`fixed top-0 min-h-12 left-0 w-screen z-10 ${
           scrollY > 100
             ? "bg-white bg-opacity-80 text-black"
             : "bg-transparent text-white" && location.pathname === "/"
@@ -152,35 +152,35 @@ export default function Navbar() {
               to="/"
               exact
               activeClassName="text-yellow-400"
-              className="text-yellow-400 whitespace-nowrap items-center sm:px-3 m:mr-10 text-white hover:text-yellow-800 hover:text-opacity-100 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
+              className="text-yellow-400 whitespace-nowrap py-2 items-center sm:px-3 m:mr-10 text-white hover:text-yellow-800 hover:text-opacity-100 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
             >
               Steven Miller
             </NavLink>
             <div className="flex">
               <NavLink
                 to="/post"
-                activeClassName="font-bold text-black"
-                className="nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  transition duration-300"
+                activeClassName="  text-yellow-400"
+                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  transition duration-300"
               >
                 RECEPIES
               </NavLink>
               <NavLink
                 to="/tutorial"
-                activeClassName="font-bold text-black"
-                className="nav-link inline-flex items-center   px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
+                activeClassName=" text-yellow-400"
+                className="nav-link whitespace-nowrap inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
               >
                 R TUTORIALS
               </NavLink>
               <NavLink
                 to="/about"
-                activeClassName="font-bold text-black"
-                className="nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
+                activeClassName=" text-yellow-400"
+                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
               >
                 ABOUT
               </NavLink>
               <NavLink
                 to="/contact"
-                activeClassName="font-bold text-black"
+                activeClassName=" text-yellow-400"
                 className="whitespace-nowrap nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
               >
                 CONTACT ME
@@ -213,34 +213,42 @@ export default function Navbar() {
       </header>
 
       {toggleMenu && (
-        <div className="burger-menu fixed top-20 z-10 justify-center pb-5 items-center w-full right-0 top-20 w-1/3 bg-white flex">
+        <div
+          className={`burger-menu fixed z-10 justify-center py-4 items-center w-full right-0 top-10 sm:top-12  w-1/3 flex ${
+            scrollY > 100
+              ? "bg-white bg-opacity-80 text-black"
+              : "bg-transparent text-white" && location.pathname === "/"
+              ? "text-white"
+              : "text-black"
+          }`}
+        >
           <NavLink
             to="/post"
-            activeClassName=" font-bold text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+            activeClassName=" text-yellow-400"
+            className="poppins transform transition duration-200 flex mx-3 text-sm "
           >
             RECEPIES
           </NavLink>
           <NavLink
-            to="/project"
-            activeClassName=" font-bold text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+            to="/tutorial"
+            activeClassName="  text-yellow-400"
+            className="poppins transform transition duration-200 flex mx-3 text-sm "
           >
-            PROJECT
+            TUTORIALS
           </NavLink>
           <NavLink
             to="/about"
-            activeClassName=" font-bold text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+            activeClassName=" text-yellow-400"
+            className="poppins transform transition duration-200 flex mx-3 text-sm "
           >
-            ABOUT ME
+            ABOUT
           </NavLink>
           <NavLink
             to="/contact"
-            activeClassName=" font-bold text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm font-bold"
+            activeClassName=" text-yellow-400"
+            className="whitespace-nowrap poppins transform transition duration-200 flex mx-3 text-sm "
           >
-            CONTACT
+            CONTACT ME
           </NavLink>
         </div>
       )}

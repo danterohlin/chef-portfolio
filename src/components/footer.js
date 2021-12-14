@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="w-3/5 h-60 mx-auto flex flex-col sm:flex-row justify-between">
-        <nav className="flex flex-col items-center sm:items-right py-3 px-3 my-6 m-auto sm:m-0 sm:my-6 sm:border-r sm:border-gray-400">
+        <nav className="flex flex-col items-center sm:items-end py-3 px-3 my-6 m-auto sm:m-0 sm:my-6 sm:border-r sm:border-gray-400">
           <NavLink
             to="#"
             activeClassName="transform scale-125"

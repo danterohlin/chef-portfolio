@@ -9,24 +9,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative bg-gray-50">
-      <video
-        className="hero object-cover"
-        width="100%"
-        playsInline
-        autoPlay
-        muted
-        loop
-      >
-        <source src={video} type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-      <section className="absolute top-40 left-1/2 transform -translate-x-1/2 flex justify-center ph-12 py-32 px-12">
-        <Link to="/contact">
-          <h1 className="text-white whitespace-nowrap font-bold poppins leading-none leading-snug text-2xl sm:text-2xl bg-black bg-opacity-60 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
-            Contact me
-          </h1>
-        </Link>
-      </section>
+      <div className="relative">
+        <video
+          className="hero object-cover"
+          width="100%"
+          playsInline
+          autoPlay
+          muted
+          loop
+        >
+          <source src={video} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        <section className="absolute top-1/4 left-1/2 transform -translate-x-1/2 flex justify-center ph-12 py-32 px-12">
+          <Link to="/contact">
+            <h1 className="text-white whitespace-nowrap font-bold poppins leading-none leading-snug text-2xl sm:text-2xl bg-black bg-opacity-60 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
+              Contact me
+            </h1>
+          </Link>
+        </section>
+      </div>
       <section className="p-10 lg:p-20 p-0 xl:w-2/4 w-5/7 mx-auto">
         <h2 className="mb-4 text-xl poppins px-4">Chef Steven Miller</h2>
         <p className="mx-8">
