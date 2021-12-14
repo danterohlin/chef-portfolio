@@ -34,10 +34,11 @@ export default function SinglePost() {
       .then((data) => setSinglePost(data[0]));
   }, [slug]);
 
-  if (!singlePost) return <div className="w-full text-center mt-20">Loading..</div>;
+  if (!singlePost)
+    return <div className="w-full text-center mt-20">Loading..</div>;
 
   return (
-    <main className="bg-gray-200 min-h-screen p-12">
+    <main className="bg-gray-200 pt-40 min-h-screen p-12">
       <article className="container shadow-lg mx-auto bg-gray-100 rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
