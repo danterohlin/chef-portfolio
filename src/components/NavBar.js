@@ -59,14 +59,14 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 min-h-12 left-0 w-screen z-10 transition-all duration-300 ${
-          scrollY > 100
-            ? "bg-black bg-opacity-60 text-white"
-            : ("bg-transparent text-white" && location.pathname === "/") ||
+        className={`fixed top-0 min-h-12 bg-opacity-80 bg-black text-white left-0 w-screen z-10 transition-all duration-200 ${
+          scrollY > 50
+            ? "bg-black"
+            : ("lg:bg-transparent text-white" && location.pathname === "/") ||
               location.pathname === "/tutorial" ||
               location.pathname === "/post"
-            ? "text-white"
-            : "text-black"
+            ? "text-black lg:bg-transparent"
+            : "text-white"
         }`}
       >
         <div
@@ -155,7 +155,7 @@ export default function Navbar() {
               to="/"
               exact
               activeClassName="text-green-300"
-              className={` whitespace-nowrap py-5 items-center sm:px-12 m:mr-10 text-white text-base sm:text-2xl font-bold poppins tracking-wide ${
+              className={` whitespace-nowrap py-5 lg:px-10 items-center xl:px-12 text-white text-base sm:text-2xl font-bold poppins tracking-wide ${
                 location.pathname === "/contact"
                   ? "text-yellow-400"
                   : "text-green-300"
@@ -167,28 +167,28 @@ export default function Navbar() {
               <NavLink
                 to="/post"
                 activeClassName=" text-yellow-400"
-                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md transform "
+                className="nav-link inline-flex items-center px-2 xl:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md transform "
               >
                 RECEPIES
               </NavLink>
               <NavLink
                 to="/tutorial"
                 activeClassName=" text-yellow-400"
-                className="nav-link whitespace-nowrap inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
+                className="nav-link whitespace-nowrap inline-flex items-center px-2 xl:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
               >
                 TUTORIALS
               </NavLink>
               <NavLink
                 to="/about"
                 activeClassName=" text-yellow-400"
-                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
+                className="nav-link inline-flex items-center px-2 xl:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
               >
                 ABOUT
               </NavLink>
               <NavLink
                 to="/contact"
                 activeClassName=" text-yellow-400"
-                className="whitespace-nowrap nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md"
+                className="whitespace-nowrap nav-link inline-flex items-center  px-2 xl:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md"
               >
                 CONTACT ME
               </NavLink>
@@ -221,31 +221,31 @@ export default function Navbar() {
           <div
             className={`burger-menu z-10 justify-center py-4 items-center w-full right-0 top-10 sm:top-12  w-1/3 flex ${
               scrollY > 100
-                ? "bg-black bg-opacity-80 text-white"
+                ? "text-white"
                 : ("bg-transparent text-white" && location.pathname === "/") ||
                   location.pathname === "/tutorial" ||
                   location.pathname === "/post"
                 ? "text-white"
-                : "text-black"
+                : "text-white lg:text-black"
             }`}
           >
             <NavLink
               to="/post"
-              activeClassName=" text-yellow-400"
+              activeClassName="text-yellow-400"
               className="poppins transform transition duration-200 flex mx-3 text-sm "
             >
               RECEPIES
             </NavLink>
             <NavLink
               to="/tutorial"
-              activeClassName="  text-yellow-400"
+              activeClassName="text-yellow-400"
               className="poppins transform transition duration-200 flex mx-3 text-sm "
             >
               TUTORIALS
             </NavLink>
             <NavLink
               to="/about"
-              activeClassName=" text-yellow-400"
+              activeClassName="text-yellow-400"
               className="poppins transform transition duration-200 flex mx-3 text-sm "
             >
               ABOUT
