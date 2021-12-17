@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import video from "../media/video-hero.mp4";
 import Carousel from "./Carousel";
 import Container from "./Container";
