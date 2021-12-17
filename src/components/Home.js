@@ -3,10 +3,12 @@ import video from "../media/video-hero.mp4";
 import Carousel from "./Carousel";
 import Container from "./Container";
 import { Link as LinkScroll } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
   const SLIDE_COUNT = 5;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
+  const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
   return (
     <main
@@ -33,7 +35,7 @@ export default function Home() {
             to="about__me"
             smooth={true}
             duration={1000}
-            offset={-250}
+            offset={isMobile ? -100 : -250}
           >
             <h1 className="text-white mb-4 cursor-pointer bg-black hover:text-black  m-auto whitespace-nowrap poppins text-center leading-none leading-snug text-xl sm:text-xl bg-opacity-80 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
               About Me
