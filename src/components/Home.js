@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import video from "../video-hero.mp4";
+import video from "../media/video-hero.mp4";
 import Carousel from "./Carousel";
+import Container from "./Container";
+import { Link as LinkScroll } from "react-scroll";
 
 export default function Home() {
   const SLIDE_COUNT = 5;
   const slides = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
-    <main className="min-h-screen relative bg-gray-50">
+    <main
+      className="min-h-screen w-screen relative bg-black bg-opacity-90"
+      id="main"
+    >
       <div className="relative">
         <video
           className="hero object-cover"
@@ -17,20 +22,115 @@ export default function Home() {
           autoPlay
           muted
           loop
+          poster="../media/poster.jpg"
         >
           <source src={video} type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <section className="absolute top-1/4 left-1/2 transform -translate-x-1/2 flex justify-center ph-12 py-32 px-12">
-          <Link to="/contact">
-            <h1 className="text-white whitespace-nowrap font-bold poppins leading-none leading-snug text-2xl sm:text-2xl bg-black bg-opacity-60 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
+        <div className="absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
+          <LinkScroll
+            to="about__me"
+            smooth={true}
+            duration={1000}
+            offset={-250}
+          >
+            <h1 className="text-white mb-4 cursor-pointer bg-black hover:text-black  m-auto whitespace-nowrap poppins text-center leading-none leading-snug text-xl sm:text-xl bg-opacity-80 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
+              About Me
+            </h1>
+          </LinkScroll>
+        </div>
+      </div>
+
+      <Container>
+        <section
+          id="about__me"
+          className="absolute top-2/4 w-3/4 sm:w-2/4 -translate-y-1/2 left-1/2 transform -translate-x-1/2 flex justify-center"
+        >
+          <div className="bg-black text-yellow-50 xl:w-3/5 bg-opacity-70 lg:p-6">
+            <h2 className="mb-8 mt-4 text-xl poppins mx-6 text-gray-50">
+              Chef Steven Miller
+            </h2>
+            <p className="mx-4">
+              <div className="flex items-center mb-2">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 sm:h-8 sm:w-8 text-green-300 mr-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                Experienced and passionate chef with experience in various
+                restaurant and company settings, striving to serve the best food
+                possible.
+              </div>
+              <div className="flex items-center mb-2">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 sm:h-8 sm:w-8 text-green-300 mr-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                Recognized as a visionary chef with knowledge of food trends and
+                the ability to think outside the box when it comes to the
+                creation of a menu.
+              </div>
+              <div className="flex items-center">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 sm:h-8 sm:w-8 text-green-300 mr-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                Bringing forth an in depth knowledge of flavors and food
+                relationships, resulting in mouth watering dishes and attractive
+                menus.
+              </div>
+            </p>
+
+            <div className="pt-6 m-auto">
+              <LinkScroll to="slide" smooth={true} duration={1000} offset={-80}>
+                <h1 className="text-white w-5/6 mb-4 cursor-pointer text-green-200 hover:text-black m-auto whitespace-nowrap poppins text-center leading-none leading-snug text-xl sm:text-xl bg-opacity-80 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
+                  Show me more!
+                </h1>
+              </LinkScroll>
+            </div>
+          </div>
+          {/* <Link to="/contact">
+            <h1 className="text-white whitespace-nowrap poppins leading-none leading-snug text-2xl sm:text-2xl bg-black bg-opacity-60 px-12 py-4 hover:bg-opacity-100 transition duration-500 hover:bg-green-400 hover:scale-105 transform">
               Contact me
             </h1>
-          </Link>
+          </Link> */}
         </section>
-      </div>
-      <section className="p-10 lg:p-20 p-0 xl:w-2/4 w-5/7 mx-auto">
-        <h2 className="mb-4 text-xl poppins px-4">Chef Steven Miller</h2>
+        {/* <h2 className="mb-4 text-xl poppins px-4">Chef Steven Miller</h2>
         <p className="mx-8">
           Experienced and passionate chef with experience in various restaurant
           and company settings, striving to serve the best food possible.
@@ -39,10 +139,14 @@ export default function Home() {
           menu. Bringing forth an in depth knowledge of flavors and food
           relationships, resulting in mouth watering dishes and attractive
           menus.
-        </p>
-        <hr className="border-gray-400 my-10" />
-        <Carousel slides={slides} />
-      </section>
+        </p> */}
+        <div className="h-screen"></div>
+
+        <section className="mt-96" id="slide">
+          {/* <hr className="border-black my-10" /> */}
+          <Carousel slides={slides} />
+        </section>
+      </Container>
     </main>
   );
 }

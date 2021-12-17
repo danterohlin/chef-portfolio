@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
+import Container from "./Container.js";
 
 export default function Tutorial() {
   const [projectData, setProjectData] = useState(null);
@@ -22,13 +23,13 @@ export default function Tutorial() {
   }, []);
 
   return (
-    <main className="bg-gray-100 pt-60 min-h-screen p-12">
-      <section className="container mx-auto">
-        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
+    <main id="main" className="bg-black bg-opacity-90 pt-20 min-h-screen">
+      <Container>
+        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-100 flex justify-center poppins">
           Tutorials
         </h1>
-        <h2 className="text-lg text-gray-700 flex justify-center mb-12">
-          Welcome to my tutorial page
+        <h2 className="text-lg text-gray-400 flex justify-center mb-12">
+          My Tutorial Page
         </h2>
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {projectData &&
@@ -78,7 +79,7 @@ export default function Tutorial() {
               </article>
             ))}
         </section>
-      </section>
+      </Container>
     </main>
   );
 }

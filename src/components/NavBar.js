@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 import SearchResult from "./SearchResult";
 import SanityClient from "../client.js";
 
@@ -58,16 +59,18 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 min-h-12 left-0 w-screen z-10 ${
+        className={`fixed top-0 min-h-12 left-0 w-screen z-10 transition-all duration-300 ${
           scrollY > 100
-            ? "bg-white bg-opacity-80 text-black"
-            : "bg-transparent text-white" && location.pathname === "/"
+            ? "bg-black bg-opacity-60 text-white"
+            : ("bg-transparent text-white" && location.pathname === "/") ||
+              location.pathname === "/tutorial" ||
+              location.pathname === "/post"
             ? "text-white"
             : "text-black"
         }`}
       >
         <div
-          className={`transition duration-400 bg-white transform h-0 scale-0
+          className={`transition duration-400 bg-white bg-opacity-90 transform h-0 scale-0
           ${
             toggleSearch
               ? "w-full scale-100 h-full flex justify-center items-center"
@@ -96,7 +99,7 @@ export default function Navbar() {
               onChange={(e) => {
                 setSearchValue(e.target.value);
               }}
-              placeholder='Try to search for "post"'
+              placeholder='Try to search for " Post "'
             ></input>
           </div>
 
@@ -126,7 +129,7 @@ export default function Navbar() {
           <SearchResult data={data} searchValue={searchValue} />
         )}
         <div className="mx-auto flex justify-between items-center h-full bg-opacity-80">
-          <nav className="flex items-center justify-between w-3/5 m-auto">
+          <nav className="flex items-center justify-between w-4/5 sm:w-3/5 m-auto">
             <button
               className="burger-menu--button"
               onClick={() => {
@@ -151,37 +154,41 @@ export default function Navbar() {
             <NavLink
               to="/"
               exact
-              activeClassName="text-yellow-400"
-              className="text-yellow-400 whitespace-nowrap py-2 items-center sm:px-3 m:mr-10 text-white hover:text-yellow-800 hover:text-opacity-100 text-base sm:text-2xl font-bold poppins tracking-widest transition-colors duration-300"
+              activeClassName="text-green-300"
+              className={` whitespace-nowrap py-5 items-center sm:px-12 m:mr-10 text-white text-base sm:text-2xl font-bold poppins tracking-wide ${
+                location.pathname === "/contact"
+                  ? "text-yellow-400"
+                  : "text-green-300"
+              }`}
             >
               Steven Miller
             </NavLink>
             <div className="flex">
               <NavLink
                 to="/post"
-                activeClassName="  text-yellow-400"
-                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  transition duration-300"
+                activeClassName=" text-yellow-400"
+                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md transform "
               >
                 RECEPIES
               </NavLink>
               <NavLink
                 to="/tutorial"
                 activeClassName=" text-yellow-400"
-                className="nav-link whitespace-nowrap inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
+                className="nav-link whitespace-nowrap inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
               >
-                R TUTORIALS
+                TUTORIALS
               </NavLink>
               <NavLink
                 to="/about"
                 activeClassName=" text-yellow-400"
-                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
+                className="nav-link inline-flex items-center px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md "
               >
                 ABOUT
               </NavLink>
               <NavLink
                 to="/contact"
                 activeClassName=" text-yellow-400"
-                className="whitespace-nowrap nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:text-gray-300 sm:text-md transform  duration-300"
+                className="whitespace-nowrap nav-link inline-flex items-center  px-2 sm:px-8 my-6 rounded text-s poppins hover:opacity-50 sm:text-md"
               >
                 CONTACT ME
               </NavLink>
@@ -210,47 +217,59 @@ export default function Navbar() {
             </div>
           </nav>
         </div>
+        {toggleMenu && (
+          <div
+            className={`burger-menu z-10 justify-center py-4 items-center w-full right-0 top-10 sm:top-12  w-1/3 flex ${
+              scrollY > 100
+                ? "bg-black bg-opacity-80 text-white"
+                : ("bg-transparent text-white" && location.pathname === "/") ||
+                  location.pathname === "/tutorial" ||
+                  location.pathname === "/post"
+                ? "text-white"
+                : "text-black"
+            }`}
+          >
+            <NavLink
+              to="/post"
+              activeClassName=" text-yellow-400"
+              className="poppins transform transition duration-200 flex mx-3 text-sm "
+            >
+              RECEPIES
+            </NavLink>
+            <NavLink
+              to="/tutorial"
+              activeClassName="  text-yellow-400"
+              className="poppins transform transition duration-200 flex mx-3 text-sm "
+            >
+              TUTORIALS
+            </NavLink>
+            <NavLink
+              to="/about"
+              activeClassName=" text-yellow-400"
+              className="poppins transform transition duration-200 flex mx-3 text-sm "
+            >
+              ABOUT
+            </NavLink>
+            <NavLink
+              to="/contact"
+              activeClassName=" text-yellow-400"
+              className="whitespace-nowrap poppins transform transition duration-200 flex mx-3 text-sm "
+            >
+              CONTACT ME
+            </NavLink>
+          </div>
+        )}
       </header>
 
-      {toggleMenu && (
-        <div
-          className={`burger-menu fixed z-10 justify-center py-4 items-center w-full right-0 top-10 sm:top-12  w-1/3 flex ${
-            scrollY > 100
-              ? "bg-white bg-opacity-80 text-black"
-              : "bg-transparent text-white" && location.pathname === "/"
-              ? "text-white"
-              : "text-black"
-          }`}
+      {scrollY > 200 && (
+        <LinkScroll
+          to="main"
+          smooth={true}
+          duration={500}
+          className="fixed bottom-14 -right-5 text-white text-base -rotate-90 transform sm:animate-bounce sm:bottom-20 sm:right-20 cursor-pointer z-10 sm:text-xl"
         >
-          <NavLink
-            to="/post"
-            activeClassName=" text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm "
-          >
-            RECEPIES
-          </NavLink>
-          <NavLink
-            to="/tutorial"
-            activeClassName="  text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm "
-          >
-            TUTORIALS
-          </NavLink>
-          <NavLink
-            to="/about"
-            activeClassName=" text-yellow-400"
-            className="poppins transform transition duration-200 flex mx-3 text-sm "
-          >
-            ABOUT
-          </NavLink>
-          <NavLink
-            to="/contact"
-            activeClassName=" text-yellow-400"
-            className="whitespace-nowrap poppins transform transition duration-200 flex mx-3 text-sm "
-          >
-            CONTACT ME
-          </NavLink>
-        </div>
+          Take me up!
+        </LinkScroll>
       )}
     </>
   );

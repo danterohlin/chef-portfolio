@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchResult({ searchValue, data }) {
   return (
-    <div className="flex fixed bg-white bg-opacity-90 text-black py-4 w-full justify-center">
+    <div className="flex fixed bg-white bg-opacity-100 text-black py-4 w-full justify-center">
       <div className="w-3/4 sm:w-2/4 flex">
         <div className="flex flex-col w-full">
           {searchValue !== "" &&

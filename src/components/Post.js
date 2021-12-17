@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import Container from "./Container.js";
 
 export default function Post() {
   const [postData, setPost] = useState(null);
@@ -33,13 +34,13 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-gray-50 pt-60 min-h-screen p-12">
-      <section className="container w-3/5 mx-auto">
-        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-700 flex justify-center poppins">
+    <main className="bg-black bg-opacity-90 pt-20 min-h-screen">
+      <Container>
+        <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-100 flex justify-center poppins">
           Recipies
         </h1>
-        <h2 className="text-lg text-gray-700 flex justify-center mb-12">
-          Welcome to my recipe page
+        <h2 className="text-lg text-gray-400 flex justify-center mb-12">
+          My Recipe Page
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData ? (
@@ -71,7 +72,7 @@ export default function Post() {
             <div className="ml-10">Loading..</div>
           )}
         </div>
-      </section>
+      </Container>
     </main>
   );
 }
