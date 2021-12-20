@@ -7,7 +7,7 @@ I deployed it with netlify (and it's just a free domain name).
 
 Take a look here  ↙
 
-https://at-portfolio.netlify.app
+https://at-portfolio-1.netlify.app/
 
 
 # Getting Started with Create React App
