@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
@@ -11,6 +11,10 @@ function urlFor(source) {
 
 export default function About() {
   const [author, setAuthor] = useState(null);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   useEffect(() => {
     sanityClient

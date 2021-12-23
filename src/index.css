@@ -31,6 +31,21 @@ textarea {
   height: 100vh;
 }
 
+.animated__header__titles {
+  animation: slideInOut 10s forwards infinite;
+  white-space: nowrap;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#animated__second__title {
+  animation-delay: 5s;
+  opacity: 0;
+}
+
 /* COLORS */
 
 .orange {
@@ -74,6 +89,7 @@ textarea {
 .burger-menu {
   display: none;
 }
+
 @media screen and (max-width: 1024px) {
   .social-icons {
     margin: 20px auto;
@@ -89,5 +105,28 @@ textarea {
   }
   .footer__nav {
     display: none;
+  }
+}
+
+@keyframes slideInOut {
+  0% {
+    margin-left: -20%;
+    opacity: 0;
+  }
+  5% {
+    margin-left: 0%;
+    opacity: 100;
+  }
+  45% {
+    margin-left: 0%;
+    opacity: 100;
+  }
+  50% {
+    margin-left: 20%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 20%;
+    opacity: 0;
   }
 }

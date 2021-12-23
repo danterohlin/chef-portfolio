@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import Container from "./Container.js";
@@ -17,6 +17,10 @@ export default function Post() {
     }
   };
 
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   useEffect(() => {
     const query = `*[_type == "post"]{
       title,
@@ -34,7 +38,7 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-black bg-opacity-90 pt-20 min-h-screen">
+    <div id="recipies" className="bg-black bg-opacity-90 pt-20 min-h-screen">
       <Container>
         <h1 className="text-2xl sm:text-4xl sm:pb-5 text-gray-100 flex justify-center poppins">
           Recipies
@@ -73,6 +77,6 @@ export default function Post() {
           )}
         </div>
       </Container>
-    </main>
+    </div>
   );
 }

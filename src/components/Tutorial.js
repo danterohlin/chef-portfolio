@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import sanityClient from "../client.js";
 import Container from "./Container.js";
 
 export default function Tutorial() {
   const [projectData, setProjectData] = useState(null);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   useEffect(() => {
     sanityClient

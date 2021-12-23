@@ -1,7 +1,11 @@
 import React from "react";
 import Container from "./Container";
+import { useLayoutEffect } from "react";
 
 export default function Contact() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <main id="main" className="bg-green-100 pt-20 min-h-screen">
       <Container>

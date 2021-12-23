@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
@@ -13,6 +13,10 @@ function urlFor(source) {
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   useEffect(() => {
     sanityClient
