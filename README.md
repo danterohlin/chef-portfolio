@@ -1,3 +1,15 @@
+This is a example portfolio/resume for me to show and try out some UX-design and content management.
+With real content this would look much better.
+
+It is built with react which makes it a SPA and means that it's really fast and doesn't have to reload everytime you go to a different page.
+It is also built with sanity, so there is a CMS (Content management system), in order to easily manage content to the site for non developers.
+I deployed it with netlify (and it's just a free domain name).
+
+Take a look here  ↙
+
+https://at-portfolio-1.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
