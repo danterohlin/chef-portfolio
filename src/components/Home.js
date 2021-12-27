@@ -41,7 +41,7 @@ export default function Home() {
             id="animated__second__title"
             className="text-white animated__header__titles text-6xl text-center font-bold -mt-24"
           >
-            Enthusiastic chef that <br /> brings the best from <br /> a big
+            Enthusiastic chef that <br /> brings the best from <br /> a wide
             variety of cuisines
           </h2>
         </div>
