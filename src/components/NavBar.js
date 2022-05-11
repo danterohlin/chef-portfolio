@@ -165,28 +165,28 @@ export default function Navbar() {
 								activeClassName=" border-b text-yellow-200"
 								className="nav-link inline-flex items-center px-2 pb-2 xl:px-4 my-6  text-s poppins hover:opacity-50 sm:text-sm transform "
 							>
-								RECEPIES
+								Recepies
 							</NavLink>
 							<NavLink
 								to="/lessons"
 								activeClassName=" border-b text-yellow-200"
 								className="nav-link whitespace-nowrap inline-flex items-center px-2 pb-2 xl:px-4 my-6 text-s poppins hover:opacity-50 sm:text-sm "
 							>
-								LESSONS
+								Lessons
 							</NavLink>
 							<NavLink
 								to="/about"
 								activeClassName=" border-b text-yellow-200"
 								className="nav-link inline-flex items-center px-2 pb-2 xl:px-4 my-6  text-s poppins hover:opacity-50 sm:text-sm "
 							>
-								ABOUT
+								About
 							</NavLink>
 							<NavLink
 								to="/contact"
 								activeClassName=" border-b text-yellow-200"
 								className="whitespace-nowrap nav-link inline-flex items-center  px-2  pb-2 xl:px-4 my-6  text-s poppins hover:opacity-50 sm:text-sm"
 							>
-								CONTACT ME
+								Contact
 							</NavLink>
 							<button
 								onClick={() => {
@@ -230,28 +230,28 @@ export default function Navbar() {
 							activeClassName="text-yellow-400"
 							className="poppins transform transition duration-200 flex mx-3 text-sm "
 						>
-							RECEPIES
+							Recepies
 						</NavLink>
 						<NavLink
-							to="/tutorial"
+							to="/lessons"
 							activeClassName="text-yellow-400"
 							className="poppins transform transition duration-200 flex mx-3 text-sm "
 						>
-							TUTORIALS
+							Lessons
 						</NavLink>
 						<NavLink
 							to="/about"
 							activeClassName="text-yellow-400"
 							className="poppins transform transition duration-200 flex mx-3 text-sm "
 						>
-							ABOUT
+							About
 						</NavLink>
 						<NavLink
 							to="/contact"
 							activeClassName=" text-yellow-400"
 							className="whitespace-nowrap poppins transform transition duration-200 flex mx-3 text-sm "
 						>
-							CONTACT ME
+							Contact
 						</NavLink>
 					</div>
 				)}
@@ -262,9 +262,9 @@ export default function Navbar() {
 					to="main"
 					smooth={true}
 					duration={500}
-					className="fixed bottom-14 -right-5 text-white text-base -rotate-90 transform sm:animate-bounce sm:bottom-20 sm:right-20 cursor-pointer z-10 sm:text-xl"
+					className="fixed bottom-14 -right-5 text-white text-base -rotate-90 transform sm:animate-bounce sm:bottom-20 sm:right-20 cursor-pointer z-10 sm:text-4xl"
 				>
-					Take me up!
+					△
 				</LinkScroll>
 			)}
 		</>

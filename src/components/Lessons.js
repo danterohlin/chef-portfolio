@@ -72,7 +72,7 @@ export default function Tutorial() {
 										target="_blank"
 										className="text-red-500 font-bold hover:text-red-400 text-base sm:text-xl"
 									>
-										View The Project
+										View the video
 										<span role="img" aria-label="right pointer" className="ml-2"></span>
 									</a>
 								</div>
