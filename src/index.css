@@ -8,125 +8,142 @@
 /* STANDARD */
 
 input {
-  padding: 10px 10px;
-  border: 2px solid transparent;
-  outline: 0;
-  resize: none;
-  line-height: 18px;
-  margin: 5px 0px;
+	padding: 10px 10px;
+	border: 2px solid transparent;
+	outline: 0;
+	resize: none;
+	line-height: 18px;
+	margin: 5px 0px;
 }
 
 input:focus,
 textarea:focus {
-  outline: 1px #d8d8d8 solid;
+	outline: 1px #d8d8d8 solid;
 }
 
 textarea {
-  padding: 10px 10px;
-  margin: 5px 0px;
-  resize: none;
+	padding: 10px 10px;
+	margin: 5px 0px;
+	resize: none;
 }
 
 .hero {
-  height: 100vh;
+	height: 100vh;
 }
 
 .animated__header__titles {
-  animation: slideInOut 10s forwards infinite;
-  white-space: nowrap;
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
+	animation: slideInOut 10s forwards infinite;
+	white-space: nowrap;
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
 }
 
 #animated__second__title {
-  animation-delay: 5s;
-  opacity: 0;
+	animation-delay: 5s;
+	opacity: 0;
 }
 
 /* COLORS */
 
 .orange {
-  color: #e6ae48;
+	color: #e6ae48;
 }
 
 /* CUSTOM */
 
 .cursive {
-  font-family: "Amatic SC", cursive;
-  font-weight: 700;
+	font-family: "Amatic SC", cursive;
+	font-weight: 700;
 }
 
 .poppins {
-  font-family: "poppins";
+	font-family: "poppins";
 }
 
 .text-xxs {
-  font-size: 0.5rem;
-  line-height: 0.75rem;
+	font-size: 0.5rem;
+	line-height: 0.75rem;
 }
 
 .prose img {
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
 }
 
 .video-bg {
-  background-image: url("../src/bg-alt.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+	background-image: url("../src/bg-alt.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .home-name {
-  font-size: 150px;
+	font-size: 150px;
 }
 .burger-menu--button {
-  display: none;
+	display: none;
 }
 .burger-menu {
-  display: none;
+	display: none;
+}
+
+@media screen and (max-width: 760px) {
+	#animated__second__title {
+		font-size: 20px;
+		line-height: 1.2;
+	}
 }
 
 @media screen and (max-width: 1024px) {
-  .social-icons {
-    margin: 20px auto;
-  }
-  .nav-link {
-    display: none;
-  }
-  .burger-menu--button {
-    display: block;
-  }
-  .burger-menu {
-    display: flex;
-  }
-  .footer__nav {
-    display: none;
-  }
+	.social-icons {
+		margin: 20px auto;
+	}
+	.nav-link {
+		display: none;
+	}
+	.burger-menu--button {
+		display: block;
+	}
+	.burger-menu {
+		display: flex;
+	}
+	.footer__nav {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.animated__header__titles {
+		font-size: 26px;
+	}
+	#animated__second__title {
+		font-size: 36px;
+		line-height: 1.5;
+	}
 }
 
 @keyframes slideInOut {
-  0% {
-    margin-left: -20%;
-    opacity: 0;
-  }
-  5% {
-    margin-left: 0%;
-    opacity: 100;
-  }
-  45% {
-    margin-left: 0%;
-    opacity: 100;
-  }
-  50% {
-    margin-left: 20%;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 20%;
-    opacity: 0;
-  }
+	0% {
+		margin-left: -20%;
+		opacity: 0;
+	}
+	5% {
+		margin-left: 0%;
+		opacity: 100;
+	}
+	45% {
+		margin-left: 0%;
+		opacity: 100;
+	}
+	50% {
+		margin-left: 20%;
+		opacity: 0;
+	}
+	100% {
+		margin-left: 20%;
+		opacity: 0;
+	}
 }
