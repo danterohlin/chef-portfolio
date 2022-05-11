@@ -54,7 +54,7 @@ export default function Home() {
 						offset={isMobile ? -50 : 0}
 					>
 						<h1 className="text-white mb-4 cursor-pointer bg-green-400 m-auto whitespace-nowrap poppins text-center leading-none leading-snug text-lg sm:text-lg bg-opacity-80 px-12 py-2 hover:bg-opacity-60 transition duration-500 hover:bg-green-400 hover:text-white hover:scale-105 transform">
-							About Me
+							About me
 						</h1>
 					</LinkScroll>
 				</div>
