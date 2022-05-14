@@ -144,7 +144,7 @@ export default function Home() {
 			</Container>
 			<Post id="recipies" />
 			<Container>
-				<section className="mt-96" id="slide">
+				<section className="mt-32 mb-20" id="slide">
 					{/* <hr className="border-black my-10" /> */}
 					<Carousel slides={slides} />
 				</section>
